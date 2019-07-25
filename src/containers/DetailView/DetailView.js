@@ -51,7 +51,7 @@ class PostDetail extends React.Component {
 
 PostDetail.propTypes = {
 
-  data: PropTypes.object
+  post: PropTypes.object
 
 }
 

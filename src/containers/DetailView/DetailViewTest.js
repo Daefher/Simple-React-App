@@ -27,6 +27,17 @@ describe( " Detail Card Component ", () =>{
 
   } )
 
-  it( "Should render")
+  // describe(" Check Proptypes ", () =>{
+  //
+  //     if('No warning', () => {
+  //
+  //       const expectedProps = {
+  //
+  //
+  //       }
+  //
+  //     } )
+  //
+  // } )
 
 } );

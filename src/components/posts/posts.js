@@ -1,5 +1,7 @@
 import React from 'react';
 import { List, Card } from 'antd';
+import PropTypes from 'prop-types';
+
 
 const PostItems = ( props ) => {
 
@@ -25,6 +27,18 @@ const PostItems = ( props ) => {
     />
 
   )
+}
+
+PostItems.propTypes = {
+
+  dataSource: PropTypes.arrayOf( PropTypes.shape({
+
+    id: PropTypes.number,
+    title: PropTypes.string,
+    body: PropTypes.string
+
+  } ) )
+
 }
 
 export default PostItems;
