@@ -9,12 +9,13 @@ const CustomLayout = ( props ) => {
   return (
 
     <Layout className="layout">
-      <Header>
+      <Header data-test="Header-Test">
         <div className="logo" />
         <Menu
+          data-test="Menu-Test"
           theme="dark"
           mode="horizontal"
-          defaultSelectedKeys={['2']}
+          defaultSelectedKeys={['1']}
           style={{ lineHeight: '64px' }}
         >
           <Menu.Item key="1">nav 1</Menu.Item>
@@ -22,13 +23,16 @@ const CustomLayout = ( props ) => {
           <Menu.Item key="3">nav 3</Menu.Item>
         </Menu>
       </Header>
-      <Content style={{ padding: '0 50px' }}>
+      <Content data-test="Content-Test"
+      style={{ padding: '0 50px' }}>
         <Breadcrumb style={{ margin: '16px 0' }}>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
           <Breadcrumb.Item>List</Breadcrumb.Item>
           <Breadcrumb.Item>App</Breadcrumb.Item>
         </Breadcrumb>
-        <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
+        <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
+          {props.children}
+        </div>
       </Content>
       <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
     </Layout>
