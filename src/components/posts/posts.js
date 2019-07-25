@@ -27,6 +27,7 @@ const PostItems = ( props ) => {
   return (
 
     <List
+      data-test="List-Component"
       grid={{
         gutter: 16,
         xs: 1,

@@ -31,7 +31,7 @@ class PostList extends React.Component {
 
     return (
       <div>
-        <PostItems data={ this.state.list }/>
+        <PostItems data-test="Posts-Component" data={ this.state.list }/>
       </div>
 
     );
