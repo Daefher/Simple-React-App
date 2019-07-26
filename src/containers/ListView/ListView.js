@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 import PostItems from '../../components/posts/posts';
+import CustomForm from '../../components/Form/form';
 
 class PostList extends React.Component {
 
@@ -32,9 +33,14 @@ class PostList extends React.Component {
     return (
       <div>
         <PostItems data-test="Posts-Component" data={ this.state.list }/>
+        <h2>Create Post</h2>
+        <CustomForm
+          requestType="post"
+          itemID={null}
+        />
       </div>
 
-    );
+    )
 
   }
 

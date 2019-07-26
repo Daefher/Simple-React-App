@@ -10,13 +10,13 @@ class CustomForm extends React.Component {
 
       event.preventDefault();
 
-      const name = event.target.elements.title.value;
+      const title = event.target.elements.title.value;
       const body = event.target.elements.body.value;
 
       switch ( requestType ) {
         case 'post':
-
-          return axios.post('https://testreact-33a3d.firebaseio.com/post.json', {
+        //https://testreact-33a3d.firebaseio.com/post/`${articleID}
+          return axios.post('https://jsonplaceholder.typicode.com/posts', {
             title: title,
             body: body
           })
@@ -24,9 +24,9 @@ class CustomForm extends React.Component {
 
         case 'put':
 
-          return axios.post(`/${postID}/`, {
-            name: name,
-            email: email
+          return axios.post(`https://jsonplaceholder.typicode.com/posts/${postID}`, {
+            title: title,
+            body: body
           })
           .then( res => console.log( res ) );
 
